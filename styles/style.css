@@ -13,8 +13,62 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+:root{
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --text-weight: 400;
+--title-text-weight: 700;
+}
 
 .page {
+ 
+  max-inline-size: 1440px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--text), "arial", sans-serif;
+  font-variation-settings: "wght" var(--text-weight);
+  background-color: var(--bg-color); 
+  color: var(--text-color);
+   background-image: 
+   repeating-linear-gradient( #d3d3d3 0px 2px, transparent 2px 4px), 
+   repeating-linear-gradient( 90deg, #d3d3d3 0px 2px, transparent 2px 4px);
+   background-size: cover;
+   background-attachment: fixed;
+
+}
+.header{
+  /* inline-size: 1280px;
+  block-size: 100lvh; */
+  font-family: var(--main-accent-text);
+  inline-size: 696px;
+  block-size: 364px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid tomato;
+  margin: auto;
+}
+
+.theme-menu__button{
+  font-family: var(--main-accent-text);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: transparent;
+
+}
+
+.header__logo{
+  font-family: var(--main-accent-text);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 65px;
+}
+
+.header__title{
+  font-family: var(--main-accent-text);
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
 }
