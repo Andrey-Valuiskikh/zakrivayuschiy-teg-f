@@ -13,12 +13,12 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-:root{
+/* :root{
   --text-color: #000000;
   --bg-color: #ffffff;
   --text-weight: 400;
 --title-text-weight: 700;
-}
+} */
 
 .page {
  
@@ -30,8 +30,9 @@
   background-color: var(--bg-color); 
   color: var(--text-color);
    background-image: 
-   repeating-linear-gradient( #d3d3d3 0px 2px, transparent 2px 4px), 
-   repeating-linear-gradient( 90deg, #d3d3d3 0px 2px, transparent 2px 4px);
+   repeating-linear-gradient( -90deg, var(--lin-gr-color) 0px 2px, transparent 2px 4px), 
+   repeating-linear-gradient( var(--lin-gr-color) 0px 2px, transparent 2px 4px),
+   linear-gradient( var(--lin-gr-mask-start) 0.01%, var(--lin-gr-mask-end));
    background-size: cover;
    background-attachment: fixed;
 
@@ -44,26 +45,22 @@
   block-size: 364px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  border: 1px solid tomato;
-  margin: auto;
+  border: 2px solid currentColor;
+  margin: 102px auto;
+  gap: 21px;
+  
 }
 
-.theme-menu__button{
-  font-family: var(--main-accent-text);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  background-color: transparent;
 
-}
 
 .header__logo{
   font-family: var(--main-accent-text);
   font-weight: 400;
   font-size: 65px;
   line-height: 65px;
+  text-decoration: none;
 }
 
 .header__title{
@@ -71,4 +68,87 @@
   font-weight: 400;
   font-size: 23px;
   line-height: 23px;
+  text-transform: uppercase;
+}
+
+.theme-menu{
+  margin-bottom: 22px;
+}
+
+.theme-menu__list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  margin-left: 17px;
+}
+.theme-menu__button{
+  position: relative;
+  font-family: var(--main-accent-text);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.theme-menu__button:disabled::before {
+  content: '\25B6';
+  font-size: 16px;
+  position: absolute;
+  inset-inline-start: -15px;
+}
+
+.card {
+  margin: 0 auto;
+  border: 2px solid currentColor;
+  background-color: var(--bg-color);
+  max-inline-size: 700px;
+  margin-block-end: 50px;
+}
+
+.card__title {
+  font-family: inherit;
+  border-block-end: 2px solid currentColor;
+  padding: 3px 10px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--title-text-weight), 'wdth' 150;
+  text-align: left;
+
+}
+
+.card__block-img{
+  position: relative;
+  width: 100%;
+}
+
+.card__block-img__label{
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  z-index: 1;
+  opacity: 0.5;
+  font-family: var(--main-accent-text);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: -1px 0 var(--tx-sh-col, #fff),
+    0 1px var(--tx-sh-col, #fff), 1px 0 var(--tx-sh-col, #fff),
+    0 -1px var(--tx-sh-col, #fff);
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px var(--tx-sh-col, #fff)) or (-webkit-text-stroke: 1px var(--tx-sh-col, #fff))) {
+  .card__block-img__label {
+      -webkit-text-stroke: 1px var(--tx-sh-col, #fff);
+      text-stroke: 1px var(--tx-sh-col, #fff);
+      text-shadow: none;
+  }
+} 
+
+.card__block-img__pic{
+  object-fit: cover;
+  object-position: center;
+  vertical-align: bottom;
+  inline-size: 100%;
+  aspect-ratio: 1/1;
 }
