@@ -13,12 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-/* :root{
-  --text-color: #000000;
-  --bg-color: #ffffff;
-  --text-weight: 400;
---title-text-weight: 700;
-} */
 
 .page {
   max-inline-size: 1440px;
