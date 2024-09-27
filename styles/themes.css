@@ -5,40 +5,37 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-light{
-    --text-color: #000000;
-    --bg-color: #ffffff;
-    --text-weight: 400;
---title-text-weight: 700;
---lin-gr-color: #d3d3d3;
---lin-gr-mask-start: #e7e7e7;
---lin-gr-mask-end: #1a1a1a;
-
-
-    
+:root.theme-light {
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --text-weight: 400;
+  --title-text-weight: 700;
+  --lin-gr-color: #d3d3d3;
+  --lin-gr-mask-start: #e7e7e7;
+  --lin-gr-mask-end: #1a1a1a;
+  --btn-text: #fff;
 }
 
-:root.theme-dark{
-    --text-color:#00cc14;
-    --bg-color: #000000 ;
-    --text-weight: 465;
---title-text-weight: 785;
---lin-gr-color: #000;
---lin-gr-mask-start: #007f0c;
---lin-gr-mask-end: #004306;
-
-
+:root.theme-dark {
+  --text-color: #00cc14;
+  --bg-color: #000000;
+  --text-weight: 465;
+  --title-text-weight: 785;
+  --lin-gr-color: #000;
+  --lin-gr-mask-start: #007f0c;
+  --lin-gr-mask-end: #004306;
+  --btn-text: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text-color:#00cc14;
-        --bg-color: #000000 ;
-        --text-weight: 465;
+  :root {
+    --text-color: #00cc14;
+    --bg-color: #000000;
+    --text-weight: 465;
     --title-text-weight: 785;
     --lin-gr-color: #000;
---lin-gr-mask-start: #007f0c;
---lin-gr-mask-end: #004306;
-
-    }
+    --lin-gr-mask-start: #007f0c;
+    --lin-gr-mask-end: #004306;
+    --btn-text: #00cc14;
+  }
 }
