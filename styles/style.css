@@ -34,8 +34,6 @@
   background-position: center;
 }
 .header {
-  /* inline-size: 1280px;
-  block-size: 100lvh; */
   font-family: var(--main-accent-text);
   max-inline-size: 696px;
   /* block-size: 364px; */
