@@ -1,17 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
---main-accent-text: 'PressStart2P-Regular';
---text: 'Inter-Variable';
---text-weight: 400;
---title-text-weight: 700;
---text-color: #000000;
---bg-color: #ffffff;
---lin-gr-color: #d3d3d3;
---lin-gr-mask-start: #e7e7e7;
---lin-gr-mask-end: #1a1a1a;
---tx-sh-col: #fff;
---svg-red-sparks: #ff0000;
---svg-main-body: #ff0000;
---svg-core: #ff0000;
---btn-text: #fff;
+  --main-accent-text: "PressStart2P-Regular";
+  --text: "Inter-Variable";
+  --text-weight: 400;
+  --title-text-weight: 700;
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --lin-gr-color: #d3d3d3;
+  --lin-gr-mask-start: #e7e7e7;
+  --lin-gr-mask-end: #1a1a1a;
+  --tx-sh-col: #fff;
+  --svg-red-sparks: #ff0000;
+  --svg-main-body: #ff0000;
+  --svg-core: #ff0000;
+  --btn-text: #fff;
 }
