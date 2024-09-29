@@ -252,6 +252,8 @@
   border: 2px solid currentColor;
   padding: 9px 17px;
   overflow: auto;
+  width: 130px;
+  height: 38px;
   /* border: none; */
   outline: none;
   line-height: 0.9;
