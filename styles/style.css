@@ -34,7 +34,7 @@
   background-position: center;
 }
 .header {
-  font-family: var(--main-accent-text);
+  font-family: var(--main-accent-text), 'fantasy';
   max-inline-size: 696px;
   /* block-size: 364px; */
   display: flex;
@@ -44,10 +44,11 @@
   border: 2px solid currentColor;
   margin: 102px auto 98px;
   gap: 21px;
+  background-color: var(--bg-color);
 }
 
 .header__logo {
-  font-family: var(--main-accent-text);
+  font-family: var(--main-accent-text), 'fantasy';
   font-weight: 400;
   font-size: clamp(3.063rem, 1.909rem + 4.923vi, 4.063rem);
   /* line-height: 65px; */
@@ -57,7 +58,7 @@
 }
 
 .header__title {
-  font-family: var(--main-accent-text);
+  font-family: var(--main-accent-text), 'fantasy';
   font-weight: 400;
   font-size: clamp(0.875rem, 0.226rem + 2.769vi, 1.438rem);
   /* line-height: 23px; */
@@ -77,7 +78,7 @@
 }
 .theme-menu__button {
   position: relative;
-  font-family: var(--main-accent-text);
+  font-family: var(--main-accent-text), 'fantasy';
   font-weight: 400;
   border: none;
   outline: none;
@@ -160,11 +161,11 @@
 
 .card__block-img__label {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 25px;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--main-accent-text);
+  font-family: var(--main-accent-text), 'fantasy';
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--tx-sh-col, #fff), 0 1px var(--tx-sh-col, #fff),
@@ -215,16 +216,17 @@
   grid-column: 2 / end;
   display: flex;
   height: 38px;
+  gap: 4px;
   width: fit-content;
 }
 
 .card__icon-button {
   display: flex;
-  width: fit-content;
   margin: 0px;
   padding: 0px;
-  /* width: 39px;
-  height: 39px; */
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
   border: 2px solid transparent;
   background-color: transparent;
   transition: border-color 0.3s;
@@ -240,31 +242,20 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid currentColor;
+  outline-offset: -2px;
 }
-/* .like-icon:focus-visible{
-  outline: 2px solid currentColor;
-} */
+
 .card__like-button {
-  font-family: var(--main-accent-text);
-  position: relative;
   grid-column: 2;
   justify-self: end;
-  border: 2px solid currentColor;
   padding: 9px 17px;
   overflow: auto;
   width: 130px;
   height: 38px;
-  /* border: none; */
   outline: none;
   line-height: 0.9;
-  background-color: transparent;
-  transition: box-shadow 0.3s;
   min-inline-size: 130px;
 }
-
-/* .card__icon-button > svg > path{
-  fill: var(--text-color);
-} */
 
 .button__text {
   position: relative;
@@ -280,18 +271,14 @@
 }
 
 .save-button {
-  position: relative;
   display: flex;
   align-items: center;
-  font-family: var(--main-accent-text);
   font-size: 14px;
   gap: 8px;
   margin: 46px auto clamp(6.375rem, 6.309rem + 0.2817vw, 6.5625rem);
   border: 2px solid currentColor;
   padding: 15px 20px;
   overflow: auto;
-  background-color: var(--bg-color);
-  transition: box-shadow 0.3s;
 }
 
 .dialog {
@@ -309,7 +296,9 @@
     "floppy text"
     "form form";
   align-items: center;
-  gap: 30px 20px;
+  gap: 10px 20px;
+  position: fixed;
+  height: 193px;
 }
 
 .dialog::backdrop {
@@ -317,14 +306,17 @@
 }
 
 .dialog .floppy-icon {
+  align-self: baseline;
   grid-area: floppy;
-  width: 39px;
+  width: 38px;
 }
 
 .dialog__text {
+  align-self: flex-start;
   grid-area: text;
   line-height: 1.5;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .dialog__form {
@@ -332,17 +324,23 @@
 }
 
 .dialog__button {
-  position: relative;
-  border: 2px solid currentColor;
   padding: 9px 17px;
   line-height: 0.9;
-  background-color: transparent;
   inline-size: 100%;
   overflow: auto;
 }
 
+.general-properties-button {
+  font-family: var(--main-accent-text);
+  position: relative;
+  border: 2px solid currentColor;
+  background-color: var(--bg-color);
+  transition: box-shadow 0.3s;
+}
+
 .card__like-button:focus-visible,
-.save-button:focus-visible {
+.save-button:focus-visible,
+.dialog__button:focus-visible {
   box-shadow: 2px 2px 0 currentColor;
 }
 
