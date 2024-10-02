@@ -250,7 +250,7 @@
   justify-self: end;
   padding: 9px 17px;
   overflow: auto;
-  width: 130px;
+  /* width: 130px; */
   height: 38px;
   outline: none;
   line-height: 0.9;
