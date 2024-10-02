@@ -34,7 +34,7 @@
   background-position: center;
 }
 .header {
-  font-family: var(--main-accent-text), 'fantasy';
+  font-family: var(--main-accent-text), "fantasy";
   max-inline-size: 696px;
   /* block-size: 364px; */
   display: flex;
@@ -48,7 +48,7 @@
 }
 
 .header__logo {
-  font-family: var(--main-accent-text), 'fantasy';
+  font-family: var(--main-accent-text), "fantasy";
   font-weight: 400;
   font-size: clamp(3.063rem, 1.909rem + 4.923vi, 4.063rem);
   /* line-height: 65px; */
@@ -58,7 +58,7 @@
 }
 
 .header__title {
-  font-family: var(--main-accent-text), 'fantasy';
+  font-family: var(--main-accent-text), "fantasy";
   font-weight: 400;
   font-size: clamp(0.875rem, 0.226rem + 2.769vi, 1.438rem);
   /* line-height: 23px; */
@@ -78,7 +78,7 @@
 }
 .theme-menu__button {
   position: relative;
-  font-family: var(--main-accent-text), 'fantasy';
+  font-family: var(--main-accent-text), "fantasy";
   font-weight: 400;
   border: none;
   outline: none;
@@ -165,7 +165,7 @@
   right: 25px;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--main-accent-text), 'fantasy';
+  font-family: var(--main-accent-text), "fantasy";
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--tx-sh-col, #fff), 0 1px var(--tx-sh-col, #fff),
